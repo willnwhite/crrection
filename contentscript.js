@@ -1,5 +1,5 @@
 document.addEventListener('click', (event) => {
-  if (event.target.tagName !== "INPUT" || event.target.tagName !== "TEXTAREA") {
+  if (event.target.tagName !== "INPUT" && event.target.tagName !== "TEXTAREA") {
     const target = event.target, original = target.textContent
     let timeout
 
