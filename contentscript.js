@@ -1,11 +1,11 @@
 document.addEventListener('click', (event) => {
-  const target = event.target, contentEditable = target.getAttribute('contentEditable')
-  if (contentEditable === null) {
+  const target = event.target
+  if (target.tagName !== "INPUT" && target.tagName !== "TEXTAREA") {
     const original = target.textContent
     let timeout
 
     target.classList.add("crrection") // style.css
-
+    const contentEditable = target.getAttribute('contentEditable')
     target.setAttribute('contentEditable', "true")
 
     function input(event) {
